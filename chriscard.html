@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic setup for body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to top, #87CEFA, #ADD8E6); /* Sky-blue gradient */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Card Styling */
+.card {
+  width: 350px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 10;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.card2{
+  width: 350px;
+  height: 450px;
+  background-color: #ce5858;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  display: flex;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 3rem;
+  color: #e60000;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+  
+}
+.message {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+  opacity: 0.8;
+}
+@keyframes twinkle {
+  0% { background-color: #ff0; opacity: 0.8; }
+  100% { background-color: #f0f; opacity: 1; }
+}
+/* Snowfall Animation */
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.snowflake {
+  position: absolute;
+  font-size: 2rem;
+  color: #fff;
+  animation: snowfall 10s linear infinite;
+}
+.bsnowflake {
+  position: absolute;
+  font-size: 4.5rem;
+  color: #fff;
+  animation: snowfall 10s linear infinite;
+}
+
+ .card:hover.card2{
+            transform:perspective(400px) rotateY(180deg);
+        
+         }
+ .card2:hover.card{
+            transform: perspective(400px) rotateY(360deg);
+         }
+
+
+@keyframes snowfall {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+</style>
+<body>
+    <div class="card">
+        <div class="card-content">
+
+          <h1 class="card-title">Merry Christmas</h1>
+          <p class="message">Wishing you a season filled with love, joy, and peace!</p>
+          <div style="align-self: center; "><img src="https://png.pngtree.com/png-vector/20231102/ourmid/pngtree-christmas-card-with-santa-claus-png-image_10363757.png" style="margin-top: -70px;margin-left: -25px;"></div>
+          
+        </div>
+        <div class="card2"></div>
+        
+        
+      </div>
+    
+      <div class="snowflakes">
+        <div class="snowflake" style="top: 10%; left: 5%;">❄</div>
+        <div class="snowflake" style="top: 20%; left: 30%;">❄</div>
+        <div class="snowflake" style="top: 40%; left: 60%;">❄</div>
+        <div class="snowflake" style="top: 50%; left: 80%;">❄</div>
+        <div class="snowflake" style="top: 60%; left: 40%;">❄</div>
+        <div class="bsnowflake" style="top: 70%; left: 20%;">❄</div>
+        <div class="bsnowflake" style="top: 15%; left: 15%;">❄</div>
+        <div class="bsnowflake" style="top: 30%; left: 45%;">❄</div>
+        <div class="bsnowflake" style="top: 45%; left: 70%;">❄</div>
+        <div class="bsnowflake" style="top: 55%; left: 85%;">❄</div>
+        <div class="bsnowflake" style="top: 65%; left: 65%;">❄</div>
+        <div class="bsnowflake" style="top: 75%; left: 50%;">❄</div>
+      </div>
+</body>
+</html>
